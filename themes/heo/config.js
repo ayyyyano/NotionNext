@@ -9,7 +9,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '欢迎来到 Nekro 的博客', url: 'https://blog.nekro.top/' },
-    { title: '文章正在迁移中 点此前往旧站点', url: 'https://docs.tangly1024.com' }
+    { title: '文章正在迁移中 点此前往旧站点', url: 'https://ayyyyano.github.io/' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -114,10 +114,10 @@ const CONFIG = {
   ],
 
   HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '交流频道',
-  HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
+  HEO_SOCIAL_CARD_TITLE_1: '前往我的 Bilibili 主页',
+  HEO_SOCIAL_CARD_TITLE_2: '文章相关视频上传 欢迎关注',
+  HEO_SOCIAL_CARD_TITLE_3: '点此跳转',
+  HEO_SOCIAL_CARD_URL: 'https://space.bilibili.com/501335897',
 
   // 底部统计面板文案
   HEO_POST_COUNT_TITLE: '文章数:',
