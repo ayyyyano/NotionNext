@@ -8,7 +8,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到 Nekro 的博客', url: 'https://blog.nekro.top/' },
+    { title: '欢迎来到本博客', url: 'https://blog.nekro.top/' },
     { title: '文章正在迁移中 点此前往旧站点', url: 'https://ayyyyano.github.io/' }
   ],
 
@@ -29,19 +29,19 @@ const CONFIG = {
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '推荐', url: '/tag/推荐' },
-  HEO_HERO_CATEGORY_2: { title: '思考', url: '/tag/思考' },
-  HEO_HERO_CATEGORY_3: { title: '工具', url: '/tag/工具' },
+  HEO_HERO_CATEGORY_2: { title: '工具', url: '/tag/工具' },
+  HEO_HERO_CATEGORY_3: { title: '思考', url: '/tag/思考' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
-  //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
+  //   HERO_RECOMMEND_COVER: 'https://www.notion.so/image/attachment%3A023080e0-b18d-405f-b947-3d0847940b71%3AMMJMiku.png?table=block&id=45aa0fbd-a377-8327-8452-01c08b9cd4e5&spaceId=b29a0fbd-a377-810c-b18e-0003e1228210&width=2000&userId=33ed872b-594c-8117-af29-0002ef142ee7&cache=v2', // 英雄区右侧图片
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
     '你好！我是',
     '🔍 分享与热心帮助',
-    '🤝 希望交更多朋友',
+    '🤝 想要交更多朋友',
     '🤖️ 数码科技爱好者'
   ],
 
