@@ -25,8 +25,15 @@ const Footer = () => {
           </a>{' '}
           / Theme{' '}
           <span className='font-semibold text-[var(--fuwari-primary)]'>
-            Fuwari
+           Fuwari
           </span>
+          / <a
+            href='https://icp.gov.moe/?keyword=20262514'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='fuwari-link font-semibold'>
+            萌ICP备20262514号
+          </a>
         </p>
       </div>
     </footer>
