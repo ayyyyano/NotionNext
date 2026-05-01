@@ -25,7 +25,7 @@ const Footer = () => {
           </a>{' '}
           / Theme{' '}
           <span className='font-semibold text-[var(--fuwari-primary)]'>
-           Fuwari
+           Fuwari 
           </span>
           / <a
             href='https://icp.gov.moe/?keyword=20262514'
