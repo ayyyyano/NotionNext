@@ -27,7 +27,7 @@ const Footer = () => {
           <span className='font-semibold text-[var(--fuwari-primary)]'>
            Fuwari 
           </span>
-          / <a
+          &nbsp;/ <a
             href='https://icp.gov.moe/?keyword=20262514'
             target='_blank'
             rel='noopener noreferrer'
