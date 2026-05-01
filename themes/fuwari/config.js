@@ -66,7 +66,7 @@ const CONFIG = {
   /** 侧栏头像/昵称下的「个人页」链接路径 */
   FUWARI_PROFILE_PATH: '/about',
   /** 联系/社群入口卡片 */
-  FUWARI_WIDGET_CONTACT: true,
+  FUWARI_WIDGET_CONTACT: false,
   /** 侧栏广告位总开关 */
   FUWARI_WIDGET_AD: false,
   /** 侧栏广告位内：是否渲染 WWAds */
@@ -80,9 +80,9 @@ const CONFIG = {
   /** 顶栏调色板内的色相滑块等；false 时展开调色板无控件 */
   FUWARI_WIDGET_THEME_COLOR_SWITCHER: true,
   /** 默认品牌色相 0–360 */
-  FUWARI_THEME_COLOR_HUE: 52,
+  FUWARI_THEME_COLOR_HUE: 164,
   /** true：隐藏顶栏调色盘按钮，无法在站内改色相 */
-  FUWARI_THEME_COLOR_FIXED: false,
+  FUWARI_THEME_COLOR_FIXED: true,
   /** 文章页右侧浮动区：跳转评论区按钮 */
   FUWARI_WIDGET_TO_COMMENT: true,
   /** 文章页右侧浮动区：深色模式切换 */
