@@ -18,7 +18,7 @@ const CONFIG = {
   /** 显示「标签」 */
   FUWARI_MENU_TAG: true,
   /** 显示「搜索」（Algolia 或站内搜索由全局配置决定） */
-  FUWARI_MENU_SEARCH: true,
+  FUWARI_MENU_SEARCH: false,
 
   // ---------------------------------------------------------------------------
   // 首页文章列表卡片
@@ -82,7 +82,7 @@ const CONFIG = {
   /** 默认品牌色相 0–360 */
   FUWARI_THEME_COLOR_HUE: 164,
   /** true：隐藏顶栏调色盘按钮，无法在站内改色相 */
-  FUWARI_THEME_COLOR_FIXED: false,
+  FUWARI_THEME_COLOR_FIXED: true,
   /** 文章页右侧浮动区：跳转评论区按钮 */
   FUWARI_WIDGET_TO_COMMENT: true,
   /** 文章页右侧浮动区：深色模式切换 */
