@@ -98,7 +98,7 @@ const CONFIG = {
   /** 正面标题 */
   FUWARI_CONTACT_TITLE: '个人主页',
   /** 正面说明文案 */
-  FUWARI_CONTACT_DESCRIPTION: '欢迎和我交流讨论 ~',
+  FUWARI_CONTACT_DESCRIPTION: '在此查看我的项目。',
   /** 正面右上角徽标 */
   FUWARI_CONTACT_FRONT_BADGE: 'Community',
   /** 跳转 URL（外链或站内路径） */
@@ -108,19 +108,19 @@ const CONFIG = {
   /** 是否使用正反面翻转卡片 */
   FUWARI_CONTACT_FLIP_CARD: false,
   /** 背面标题 */
-  FUWARI_CONTACT_BACK_TITLE: '需要帮助？',
+  FUWARI_CONTACT_BACK_TITLE: '遇到问题? ',
   /** 背面说明 */
-  FUWARI_CONTACT_BACK_DESCRIPTION: '可提交问题、建议与合作意向。',
+  FUWARI_CONTACT_BACK_DESCRIPTION: '欢迎前往留言板进行留言。',
   /** 背面行动文案 */
-  FUWARI_CONTACT_BACK_TEXT: '查看 →',
+  FUWARI_CONTACT_BACK_TEXT: '好的',
 
   // ---------------------------------------------------------------------------
   // 全站动效（按需开启，可能影响性能）
   // ---------------------------------------------------------------------------
   /** Lenis 平滑滚动 */
-  FUWARI_EFFECT_LENIS: false,
+  FUWARI_EFFECT_LENIS: true,
   /** 自定义光标圆点 */
-  FUWARI_EFFECT_CURSOR_DOT: false,
+  FUWARI_EFFECT_CURSOR_DOT: true,
 
   // ---------------------------------------------------------------------------
   // 文章页
