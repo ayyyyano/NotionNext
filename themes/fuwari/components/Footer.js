@@ -1,4 +1,5 @@
 import { siteConfig } from '@/lib/config'
+import Script from 'next/script'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -34,7 +35,7 @@ const Footer = () => {
             className='fuwari-link font-semibold'>
             萌ICP备20262514号
           </a>
-            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <Script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" strategy="afterInteractive" />
             <span id="busuanzi_container_site_pv">&nbsp;/ 本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
         </p>
       </div>
