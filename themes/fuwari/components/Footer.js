@@ -1,3 +1,5 @@
+import { BeiAnGongAn } from '@/components/BeiAnGongAn'
+import BeiAnSite from '@/components/BeiAnSite'
 import { siteConfig } from '@/lib/config'
 import Script from 'next/script'
 
@@ -28,15 +30,12 @@ const Footer = () => {
           <span className='font-semibold text-[var(--fuwari-primary)]'>
            Fuwari 
           </span>
-          &nbsp;/ <a
-            href='https://icp.gov.moe/?keyword=20262514'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='fuwari-link font-semibold'>
-            萌ICP备20262514号
-          </a>
             <Script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" strategy="afterInteractive" />
             <span id="busuanzi_container_site_pv">&nbsp;/ 本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        </p>
+        <p className='mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs [&_a]:fuwari-link [&_br]:hidden'>
+          <BeiAnSite />
+          <BeiAnGongAn className='inline-flex items-center justify-center' />
         </p>
       </div>
     </footer>
