@@ -33,8 +33,12 @@ const ThemeColorSwitch = ({ onColorChange }) => {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_HUE_KEY)
     const initialHue = stored ? parseInt(stored, 10) : defaultHue
+
     setHue(initialHue)
-    applyColor(hslToHex(initialHue, 85, 62), initialHue)
+
+    setTimeout(() => {
+      applyColor(hslToHex(initialHue, 85, 62), initialHue)
+    }, 100)
   }, [])
 
   const handleSelect = nextHue => {
