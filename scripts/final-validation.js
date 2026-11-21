@@ -69,7 +69,7 @@ function validateOptimizationTasks() {
       checks: [
         { file: 'components/SEO.js', desc: 'SEO 组件优化', validate: validateSEOComponent },
         { file: 'components/Accessibility.js', desc: '可访问性组件' },
-        { file: 'lib/sitemap.js', desc: '站点地图生成器' }
+        { file: 'lib/utils/sitemap.js', desc: '站点地图生成器' }
       ]
     },
     {
@@ -155,16 +155,26 @@ function validateDependencies(filePath) {
   try {
     const packageJson = JSON.parse(fs.readFileSync(filePath, 'utf8'))
     
-    // 检查关键依赖是否已更新
-    const keyDeps = {
-      'next': '^14.2.30',
-      'react': '^18.3.1',
-      'tailwindcss': '^3.4.17'
+    // 检查关键依赖是否达到最低版本（用 semver 下限比较，避免上游升级后误报）
+    const minDeps = {
+      'next': '14.2.30',
+      'react': '18.3.1',
+      'tailwindcss': '3.4.17'
     }
-    
-    for (const [dep, expectedVersion] of Object.entries(keyDeps)) {
+    const parseVersion = v => String(v).replace(/^[^\d]*/, '').split('.').map(n => parseInt(n, 10) || 0)
+    const gte = (a, b) => {
+      const av = parseVersion(a)
+      const bv = parseVersion(b)
+      for (let i = 0; i < 3; i++) {
+        if (av[i] > bv[i]) return true
+        if (av[i] < bv[i]) return false
+      }
+      return true
+    }
+
+    for (const [dep, minVersion] of Object.entries(minDeps)) {
       const currentVersion = packageJson.dependencies?.[dep] || packageJson.devDependencies?.[dep]
-      if (!currentVersion || !currentVersion.includes(expectedVersion.replace('^', ''))) {
+      if (!currentVersion || !gte(currentVersion, minVersion)) {
         return false
       }
     }
