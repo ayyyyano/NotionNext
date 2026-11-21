@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { generateRss } from '@/lib/utils/rss'
+import { generateRss, shouldGenerateRssForLocale } from '@/lib/utils/rss'
 import { getPostBlocks } from '@/lib/db/SiteDataApi'
 import { formatNotionBlock } from '@/lib/db/notion/getPostBlocks'
 import { adapterNotionBlockMap } from '@/lib/utils/notion.util'
@@ -112,5 +112,51 @@ describe('generateRss', () => {
     )
     expect(fs.writeFileSync).toHaveBeenCalledTimes(3)
   })
-})
 
+  it('uses summary without fetching blocks when RSS_FULL_CONTENT is disabled', async () => {
+    await generateRss({
+      NOTION_CONFIG: {
+        AUTHOR: 'author',
+        LANG: 'zh-CN',
+        SUB_PATH: '',
+        CONTACT_EMAIL: '',
+        RSS_FULL_CONTENT: 'false'
+      },
+      siteInfo: {
+        title: 'site',
+        description: 'desc',
+        link: 'https://example.com'
+      },
+      latestPosts: [
+        {
+          id: 'post-1',
+          slug: 'hello',
+          title: 'Hello',
+          summary: 'Summary',
+          publishDay: '2026-08-25'
+        }
+      ]
+    })
+
+    expect(getPostBlocks).not.toHaveBeenCalled()
+    expect(adapterNotionBlockMap).not.toHaveBeenCalled()
+    expect(formatNotionBlock).not.toHaveBeenCalled()
+    expect(addItemMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        description: 'Summary',
+        content: 'Summary'
+      })
+    )
+    expect(fs.writeFileSync).toHaveBeenCalledTimes(3)
+  })
+
+  it('generates RSS only for the default locale during multi-locale builds', () => {
+    expect(shouldGenerateRssForLocale({ locale: undefined })).toBe(true)
+    expect(
+      shouldGenerateRssForLocale({ locale: 'zh-CN', defaultLocale: 'zh-CN' })
+    ).toBe(true)
+    expect(
+      shouldGenerateRssForLocale({ locale: 'en', defaultLocale: 'zh-CN' })
+    ).toBe(false)
+  })
+})
